@@ -1,0 +1,17 @@
+{
+	"pluginName": "PacTester",
+	"description": "测试PAC链接, 校验URL是直连还是走代理",
+	"version": "0.0.1",
+	"preload": "preload.js",
+	"main" : "testpac.html",
+	"logo": "pac.png",
+	"homepage" : "https://github.com/me10zyl/utools-pacTester",
+	"features": [
+		{
+		"code": "pactester",
+		"explain": "Open Pac Tester",
+			"cmds":["pac", "pactester"]
+		}
+	],
+	"author": "me10zyl"
+}
