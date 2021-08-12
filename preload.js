@@ -100,7 +100,7 @@ function(){
         pacURL.value = localStorage['tmp2']
     }
     checkURL.onclick = async ()=> {
-        let elem = document.getElementById('pacScript');
+        /*let elem = document.getElementById('pacScript');
         if(elem){
             elem.remove()
         }
@@ -111,10 +111,15 @@ function(){
         head.appendChild(script);
         await new Promise((r1,r2)=>{script.onload = function (){
             r1()
-        }});
+        }});*/
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET',  pacURL.value, false);
+        xhr.send(null);
+        let response = xhr.responseText
+        eval(response)
         let indexOf = url.value.replace(/^http(s)?:\/\//,'').indexOf('/');
         host.value = url.value.replace(/^http(s)?:\/\//,'').substr(0, indexOf > 0 ? indexOf : url.value.length)
-        console.log('scripts',  script.innerText)
+        //console.log('scripts',  script.innerText)
         let data = FindProxyForURL(url.value, host.value);
         result.innerText = url.value + ":" + "\n" + data
         console.log(data)
