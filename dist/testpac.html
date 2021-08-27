@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>PAC tester</title>
+    <style>
+        div {
+            margin: 5px 0px;
+        }
+    </style>
+    <link rel="stylesheet" href="./bootstrap.min.css"  crossorigin="anonymous">
+</head>
+<body>
+<div style="width: 80%;margin: 0 auto;">
+    <h1>PAC Tester</h1>
+    <div>
+        PAC URL : <input id="pacURL" placeholder="http://127.0.0.1:1080/pac" class="form-control"/>
+    </div>
+    <div>
+        Test URL : <input id="url" placeholder="https://www.google.com" class="form-control">
+    </div>
+    <div>
+        HOST(generated) : <input id="host" disabled class="form-control">
+    </div>
+    <pre id="result" style="margin: 10px 0">
+No Results.
+</pre>
+    <div>
+        <button id="checkURL" class="btn btn-default">Find Rule</button>
+    </div>
+</div>
+</body>
+</html>
